@@ -3,4 +3,6 @@
 
 #include "ruby.h"
 
+VALUE hello_from_c(VALUE self, VALUE name);
+
 #endif /* GEM_WITH_C_EXTENSION_H */
