@@ -1,8 +1,82 @@
 # GemWithCExtension
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gem_with_c_extension`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is an example for a simple Ruby Gem with C-Extension.
 
-TODO: Delete this and the text above, and describe your gem
+## Steps used to create this gem:
+
+
+General info on how to [generate a Ruby gem](https://bundler.io/guides/creating_gem.html)
+
+
+`gem update bundler`
+
+`bundle gem --help`
+
+`bundle gem gem_with_c_extension --ext --mit --test=rspec --ci=github --linter=rubocop --edit=subl`
+
+
+```
+Initializing git repo in /Users/tilo/GitHub/gem_with_c_extension
+      create  gem_with_c_extension/Gemfile
+      create  gem_with_c_extension/lib/gem_with_c_extension.rb
+      create  gem_with_c_extension/lib/gem_with_c_extension/version.rb
+      create  gem_with_c_extension/sig/gem_with_c_extension.rbs
+      create  gem_with_c_extension/gem_with_c_extension.gemspec
+      create  gem_with_c_extension/Rakefile
+      create  gem_with_c_extension/README.md
+      create  gem_with_c_extension/bin/console
+      create  gem_with_c_extension/bin/setup
+      create  gem_with_c_extension/.gitignore
+      create  gem_with_c_extension/.rspec
+      create  gem_with_c_extension/spec/spec_helper.rb
+      create  gem_with_c_extension/spec/gem_with_c_extension_spec.rb
+      create  gem_with_c_extension/.github/workflows/main.yml
+      create  gem_with_c_extension/LICENSE.txt
+      create  gem_with_c_extension/CODE_OF_CONDUCT.md
+      create  gem_with_c_extension/CHANGELOG.md
+      create  gem_with_c_extension/.rubocop.yml
+      create  gem_with_c_extension/ext/gem_with_c_extension/extconf.rb
+      create  gem_with_c_extension/ext/gem_with_c_extension/gem_with_c_extension.h
+      create  gem_with_c_extension/ext/gem_with_c_extension/gem_with_c_extension.c
+         run  subl "/Users/tilo/GitHub/gem_with_c_extension/gem_with_c_extension.gemspec" from "."
+Gem 'gem_with_c_extension' was successfully created. For more information on making a RubyGem visit https://bundler.io/guides/creating_gem.html
+```
+
+`cd gem_with_c_extension`
+
+open it with your editor
+
+and edit the following files to add the C-extension and its use:
+
+edit gemspec
+
+edit ext/gem_with_c_extension/gem_with_c_extension.c
+edit ext/gem_with_c_extension/gem_with_c_extension.h
+
+edit lib/gem_with_c_extension.rb
+edit lib/gem_with_c_extension/version.rb
+edit spec/gem_with_c_extension_spec.rb
+
+
+bundle install 
+
+rake
+
+rake build
+rake install 
+rake release
+
+
+## References:
+
+https://www.rubyguides.com/2018/03/write-ruby-c-extension/
+
+https://rubyreferences.github.io/rubyref/advanced/extensions.html
+
+https://silverhammermba.github.io/emberb/c/#string
+
+
+
 
 ## Installation
 
@@ -16,7 +90,13 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+    require "gem_with_c_extension"
+
+    GemWithCExtension.hello('Mark')
+    => Hello Mark, name length: 4
+```
+
 
 ## Development
 
