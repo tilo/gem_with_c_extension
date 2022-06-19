@@ -51,19 +51,23 @@ and edit the following files to add the C-extension and its use:
 edit gemspec
 
 edit ext/gem_with_c_extension/gem_with_c_extension.c
+
 edit ext/gem_with_c_extension/gem_with_c_extension.h
 
 edit lib/gem_with_c_extension.rb
-edit lib/gem_with_c_extension/version.rb
-edit spec/gem_with_c_extension_spec.rb
 
+edit lib/gem_with_c_extension/version.rb
+
+edit spec/gem_with_c_extension_spec.rb
 
 bundle install 
 
 rake
 
 rake build
+
 rake install 
+
 rake release
 
 
