@@ -26,8 +26,8 @@ jobs:
           - truffleruby
           - truffleruby-head
           - mingw
-          - jruby
-          - jruby-head
+          # - jruby
+          # - jruby-head
         exclude:
           - { os: ubuntu,  ruby: mingw }
           - { os: macos,   ruby: mingw }
