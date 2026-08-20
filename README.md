@@ -83,7 +83,6 @@ https://silverhammermba.github.io/emberb/c/#string
 
 
 
-
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
